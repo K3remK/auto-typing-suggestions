@@ -48,6 +48,7 @@ Please run the executable from a **native system terminal** (e.g., Terminal, iTe
     ```bash
     ./build/auto_typing_suggestion
     ```
+[Screencast from 2026-02-15 17-13-37.webm](https://github.com/user-attachments/assets/4b212c32-0c5d-409d-b191-74282612494e)
 
 ### 🎮 Controls
 *   ⌨️ **Typing (a-z):** Input characters to filter suggestions.
