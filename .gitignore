@@ -1,0 +1,14 @@
+# Build directories
+cmake-build-debug/
+build/
+
+# IDE settings
+.idea/
+.vscode/
+
+# System files
+.DS_Store
+
+# Executables
+auto_typing_suggestion
+*.o
