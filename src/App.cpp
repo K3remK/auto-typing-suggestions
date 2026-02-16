@@ -36,7 +36,7 @@ void App::run() {
     int mode = 0;                       // 0 : typing, 1 : selecting
 
     while (ready) {
-        const int ch = getch();
+        const int ch = getch_instant();
 
 
         // ESC to exit
@@ -79,7 +79,7 @@ void App::run() {
         }
 
         // enter to confirm selection
-        if (ch == 10) {
+        if (ch == 10 || ch == 13) {
             word = foundWords[selection_index];
             mode = 0;
             selection_index = 0;

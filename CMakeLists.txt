@@ -11,3 +11,7 @@ add_executable(auto_typing_suggestion main.cpp
         src/App.cpp
         src/include/App.h
         src/include/Util.h)
+
+if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
+  target_compile_definitions(auto_typing_suggestion PUBLIC "_WIN32")
+endif()

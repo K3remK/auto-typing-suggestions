@@ -25,7 +25,7 @@ static void print(const std::string& text, const Color bgColor, const Color fgCo
     std::cout << "\033[" + std::to_string(bgColor + 10) + "m\033[" + std::to_string(fgColor) + "m" << text << "\033[0m";
 }
 
-static int getch() {
+static int getch_instant() {
 #ifdef _WIN32
     return _getch(); // On Windows, this is already non-canonical
 #else

@@ -30,6 +30,7 @@ This project uses CMake. Ensure you have CMake and a C++ compiler installed.
     ```bash
     cmake -S . -B build
     ```
+    **if you are on windows i recommend using "-G ''MinGW Makefiles" to produce MinGW makefile system instead of visual studio**
 
 3.  Build the executable:
     ```bash
@@ -47,6 +48,10 @@ Please run the executable from a **native system terminal** (e.g., Terminal, iTe
 2.  Run the application:
     ```bash
     ./build/auto_typing_suggestion
+    ```
+    or
+    ```bash
+    ./build/Debug/auto_typing_suggestion
     ```
 [Screencast from 2026-02-15 17-32-54.webm](https://github.com/user-attachments/assets/305b2ffd-5f61-4d61-ab50-f36342f26f66)
 

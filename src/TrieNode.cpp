@@ -4,8 +4,6 @@
 
 #include "include/TrieNode.h"
 
-#include <strings.h>
-
 TrieNode::TrieNode(const char data) {
     this->data = data;
     children = std::vector<TrieNode*>(ALPHABET_SIZE, nullptr);
