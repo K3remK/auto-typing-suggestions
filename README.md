@@ -1,6 +1,6 @@
 # ⌨️ Auto Typing Suggestion
 
-A C++ terminal-based application that provides real-time typing suggestions using a Trie data structure.
+A C++ terminal-based application that provides real-time typing suggestions using a Ternary Search Tree data structure.
 
 ## ℹ️ Overview
 
@@ -8,14 +8,24 @@ A C++ terminal-based application that provides real-time typing suggestions usin
 This application acts as an intelligent autocomplete tool in your terminal. As you type, it instantly queries a pre-loaded dictionary to suggest words that complete your current prefix.
 
 ### 🛠️ How it does it
-*   🌳 **Data Structure:** Utilization of a **Trie (Prefix Tree)** allows for O(L) time complexity for insertions and searches (where L is the length of the word), making suggestion lookups extremely fast even with a large dictionary.
+*   🌳 **Data Structure:** Utilization of a **Ternary Search Tree (TST)** allows for efficient memory usage and fast lookups. The project was migrated from a standard Trie to a TST to optimize for space, resulting in significant memory reductions while maintaining O(L) time complexity for searches (where L is the length of the word).
 *   🖥️ **Terminal Interaction:** The application bypasses standard buffered input to read keystrokes directly (`getch` implementation via `termios` on Linux/macOS and `conio.h` on Windows).
 *   🎨 **Rendering:** It uses ANSI escape codes to handle cursor positioning and text highlighting, creating a dynamic TUI (Text User Interface) experience without heavy GUI libraries.
 
 ### 💡 Why it is useful
-*   🎓 **Educational Value:** Demonstrates a practical implementation of Trie data structures for autocomplete systems.
+*   🎓 **Educational Value:** Demonstrates a practical implementation of Ternary Search Tree data structures for autocomplete systems.
 *   🐧 **Low-Level & Cross-Platform:** Shows how to handle raw terminal input and portable coding techniques across different operating systems.
 *   🧮 **Algorithms:** Efficiently handles prefix-based querying which is the backbone of search engines and typing assistants.
+
+## 📊 Performance & Memory Optimization
+
+The project has been optimized by switching from a traditional Trie (which uses an array of pointers for children) to a **Ternary Search Tree (TST)**.
+
+**Memory Usage Comparison (Massif Analysis):**
+*   **Standard Trie:** ~721 MB
+*   **Ternary Search Tree:** ~34 MB
+
+**Result:** ~95% reduction in memory usage for the provided dictionary dataset.
 
 ## 🏗️ Build Instructions
 
@@ -38,6 +48,8 @@ This project uses CMake. Ensure you have CMake and a C++ compiler installed.
     ```
 
 ## 🚀 Usage
+
+
 
 **⚠️ IMPORTANT: Run in a Native Terminal ⚠️**
 Please run the executable from a **native system terminal** (e.g., Terminal, iTerm2, cmd.exe, PowerShell).

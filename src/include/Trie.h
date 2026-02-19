@@ -15,15 +15,15 @@ public:
     Trie();
     ~Trie() = default;
 
-    void insert(const std::string &word);
-    [[nodiscard]] bool search(const std::string& word) const;
+    void Insert(const std::string &word);
+    [[nodiscard]] bool Search(const std::string& word) const;
     // bool remove(std::string word);
-    [[nodiscard]] std::vector<std::string> prefixSearch(const std::string &prefix) const;
-    [[nodiscard]] bool isEmpty() const;
+    [[nodiscard]] std::vector<std::string> SearchPrefix(const std::string &prefix) const;
+    [[nodiscard]] bool IsEmpty() const;
 private:
     static void prefixSearchHelper(const TrieNode* node, const std::string &str, std::vector<std::string>& words);
 private:
-    TrieNode *root;
+    TrieNode*root;
     bool empty;
 };
 

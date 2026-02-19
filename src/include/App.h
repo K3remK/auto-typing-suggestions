@@ -7,6 +7,7 @@
 
 #include <string>
 #include "Trie.h"
+#include "TernarySearchTree.h"
 #include "Util.h"
 
 class App {
@@ -17,7 +18,7 @@ public:
 private:
     [[nodiscard]] std::string getText() const;
 private:
-    Trie* trie;
+    TernarySearchTree* trie;
     bool ready = true;
     std::vector<std::string> typedWords;
     std::string dictLoc;

@@ -8,17 +8,18 @@
 
 App::App(const std::string &dictLoc) {
     this->dictLoc = dictLoc;
-    this->trie = new Trie();
+    this->trie = new TernarySearchTree();
     this->nWords = 10;
     std::fstream file(dictLoc.c_str(), std::ios::in);
     if (!file) {
         std::cerr << " ... " << "Unable to open file " << dictLoc << "\n";
         ready = false;
     }
-
+    int count = 0;
     for (std::string word; std::getline(file, word);) {
-        trie->insert(word);
+        trie->Insert(word);
     }
+    std::cout << count << std::endl;
     file.close();
 }
 
@@ -98,7 +99,7 @@ void App::run() {
         std::cout << "text: " << getText() << word << "_" << std::endl;
 
         if (!word.empty() && word != prev_word) {
-            foundWords = trie->prefixSearch(word);
+            foundWords = trie->SearchPrefix(word);
         }
         bool printed = false;
         for (int i = 0; i < foundWords.size(); i++) {

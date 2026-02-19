@@ -11,7 +11,7 @@ Trie::Trie() {
     this->root = new TrieNode();
 }
 
-void Trie::insert(const std::string &word) {
+void Trie::Insert(const std::string &word) {
     TrieNode* tmp = root;
     for (int i = 0; i < word.length(); i++) {
         const char c = word[i];
@@ -22,7 +22,7 @@ void Trie::insert(const std::string &word) {
     empty = false;
 }
 
-bool Trie::search(const std::string& word) const {
+bool Trie::Search(const std::string& word) const {
     const TrieNode* tmp = root;
     for (int i = 0; i < word.length(); i++) {
         const char c = word[i];
@@ -33,7 +33,7 @@ bool Trie::search(const std::string& word) const {
     return tmp->isEndOfWord();
 }
 
-std::vector<std::string> Trie::prefixSearch(const std::string &prefix) const {
+std::vector<std::string> Trie::SearchPrefix(const std::string &prefix) const {
     const TrieNode* tmp = root;
     std::vector<std::string> words;
     for (int i = 0; i < prefix.length(); i++) {
@@ -45,7 +45,7 @@ std::vector<std::string> Trie::prefixSearch(const std::string &prefix) const {
     return words;
 }
 
-bool Trie::isEmpty() const {
+bool Trie::IsEmpty() const {
     return empty;
 }
 
