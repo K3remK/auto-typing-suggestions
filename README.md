@@ -26,6 +26,8 @@ The project has been optimized by switching from a traditional Trie (which uses 
 *   **Ternary Search Tree:** ~34 MB
 
 **Result:** ~95% reduction in memory usage for the provided dictionary dataset.
+<img width="1727" height="767" alt="trie" src="https://github.com/user-attachments/assets/63639e61-626b-40f8-acf3-10b7dba9e4ca" />
+<img width="1727" height="767" alt="tst" src="https://github.com/user-attachments/assets/073e333e-4aba-4ff9-b0a7-cdff4e68c346" />
 
 ## 🏗️ Build Instructions
 
